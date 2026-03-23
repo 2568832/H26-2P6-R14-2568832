@@ -15,6 +15,7 @@ namespace AppCompteurHydro
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new FrmPrincipal());
+
         }
     }
 }

@@ -1,4 +1,5 @@
 using System;
+using System.Windows.Forms;
 
 namespace AppCompteurHydro
 {
@@ -49,8 +50,12 @@ namespace AppCompteurHydro
         {
             // TODO 01 : Ajouter le code nécessaire pour lancer une exception lorsque pQuantitéKwh est négatif.
             // L'exception à lancer est ArgumentOutOfRangeException
+            if (pQuantitéKwh < 0)
+            {
+                throw new ArgumentOutOfRangeException();
+                m_consommationActuelle += pQuantitéKwh;
+            }
 
-            m_consommationActuelle += pQuantitéKwh;
         }
 
         #endregion

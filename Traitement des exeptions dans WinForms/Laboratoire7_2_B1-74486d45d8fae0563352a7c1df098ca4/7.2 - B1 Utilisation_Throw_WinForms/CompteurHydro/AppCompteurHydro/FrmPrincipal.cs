@@ -24,9 +24,17 @@ namespace AppCompteurHydro
         //==================================================================================================
         private void mnuOpérationConsommer100Kw_Click(object sender, EventArgs e)
         {
-            m_objCompteurHydro.Consommer(-100);
+            try
+            {
+                m_objCompteurHydro.Consommer(-100);
 
-            lblConsommation.Text = m_objCompteurHydro.ConsommationActuelle.ToString("000000");
+                lblConsommation.Text = m_objCompteurHydro.ConsommationActuelle.ToString("000000");
+            }
+            catch (ArgumentOutOfRangeException a)
+            {
+                MessageBox.Show(a.Message);
+            }
+            
         }
         //==================================================================================================
         private void mnuOpérationConsommer5250Kw_Click(object sender, EventArgs e)
@@ -34,6 +42,11 @@ namespace AppCompteurHydro
             m_objCompteurHydro.Consommer(5250);
 
             lblConsommation.Text = m_objCompteurHydro.ConsommationActuelle.ToString("000000");
+        }
+
+        private void FrmPrincipal_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
