@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36327.8 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Intro aux exceptions en console", "Intro aux exceptions en console\Intro aux exceptions en console.csproj", "{668FE454-553B-4681-9CAB-39880E29046A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{668FE454-553B-4681-9CAB-39880E29046A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{668FE454-553B-4681-9CAB-39880E29046A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{668FE454-553B-4681-9CAB-39880E29046A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{668FE454-553B-4681-9CAB-39880E29046A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5DAD01C0-BB1A-4F32-80DD-92732B8E6E6B}
+	EndGlobalSection
+EndGlobal
