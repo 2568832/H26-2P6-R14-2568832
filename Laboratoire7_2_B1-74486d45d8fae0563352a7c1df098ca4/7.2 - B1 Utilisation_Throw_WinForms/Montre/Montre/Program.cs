@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Trace_d_exécution
+namespace ApplicationMontre
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         /// Point d'entrée principal de l'application.
@@ -16,7 +14,7 @@ namespace Trace_d_exécution
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmPrincipal());
         }
     }
 }

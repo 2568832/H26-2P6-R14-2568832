@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace traitement_des_exeptions_dans_WinForms
+namespace AppCompteurHydro
 {
-    internal static class Program
+    static class Program
     {
         /// <summary>
         /// Point d'entrée principal de l'application.
@@ -16,7 +14,7 @@ namespace traitement_des_exeptions_dans_WinForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FrmPrincipal());
         }
     }
 }
