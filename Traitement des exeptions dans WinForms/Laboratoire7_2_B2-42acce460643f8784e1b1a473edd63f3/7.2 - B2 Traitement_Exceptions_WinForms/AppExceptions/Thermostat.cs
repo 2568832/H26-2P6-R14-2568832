@@ -44,7 +44,7 @@ namespace AppExceptions
             protected set
             {
                 if (value < MIN_TEMPERATURE || value > MAX_TEMPERATURE)
-                    throw new ArgumentOutOfRangeException();
+                    throw new ArgumentOutOfRangeException("TRop Grand");
                 m_temperature = value;
             }
     }

@@ -16,8 +16,15 @@ namespace AppExceptions
         private void BtnExemple1_Click(object sender, EventArgs e)
         {
             // DÉCOMMENTEZ
-            //Thermostat objThermostat;
-            //objThermostat = new Thermostat(999);
+            Thermostat objThermostat;
+            try
+            {
+                objThermostat = new Thermostat(999);
+            }
+            catch (ArgumentOutOfRangeException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
 
         }
@@ -27,8 +34,16 @@ namespace AppExceptions
         private void BtnExemple2_Click(object sender, EventArgs evt)
         {
             // DÉCOMMENTEZ
-            //int[] tab = new int[5];
-            //tab[10] = 99;
+            int[] tab = new int[5];
+            try
+            {
+                tab[10] = 99;
+
+            }
+            catch (Exception a)
+            { 
+                MessageBox.Show(a.Message);
+            }
         }
 
         #endregion
@@ -38,11 +53,24 @@ namespace AppExceptions
         private void BtnExemple3_Click(object sender, EventArgs evt)
         {
             // DÉCOMMENTEZ
-            //string chaine1 = null;
-            //string chaine2 = "abcd";
-            //int nombre = 0;
-            //nombre = int.Parse(chaine1);
-            //MessageBox.Show("La valeur de nombre est : " + nombre.ToString());
+
+            try
+            {
+                string chaine1 = null;
+                string chaine2 = "abcd";
+                int nombre = 0;
+                nombre = int.Parse(chaine1);
+                MessageBox.Show("La valeur de nombre est : " + nombre.ToString());
+            }
+            catch (ArgumentNullException a)
+            {
+                MessageBox.Show(a.Message);
+            }
+            catch (NullReferenceException b)
+            {
+                MessageBox.Show(b.Message);
+            }
+
         }
         #endregion
 
