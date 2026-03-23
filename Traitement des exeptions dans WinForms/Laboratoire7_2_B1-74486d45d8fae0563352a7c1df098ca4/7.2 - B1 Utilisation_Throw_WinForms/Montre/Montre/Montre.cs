@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Forms;
 
 namespace ApplicationMontre
 {
@@ -27,8 +28,16 @@ namespace ApplicationMontre
             }
             set // accès en écriture
             {
-                
-                m_heures = value;
+                if (m_heures > 23)
+                {
+                    m_heures = 0;
+                    throw new ArgumentOutOfRangeException();
+                }
+                else
+                {
+                    m_heures = value;
+
+                }
             }
         }
 
@@ -46,8 +55,17 @@ namespace ApplicationMontre
             }
             set // accès en écriture
             {
+                if (m_heures > 23 )
+                {
+                    m_minutes = 0;
+                    throw new ArgumentOutOfRangeException();
+                }
+                else
+                {
+                    m_minutes = value;
+
+                }
                 
-                m_minutes = value;
             }
         }
 
@@ -65,8 +83,16 @@ namespace ApplicationMontre
             }
             set // accès en écriture
             {
-                
-                m_secondes = value;
+                if (m_heures > 23)
+                {
+                    m_secondes = 0;
+                    throw new ArgumentOutOfRangeException();
+                }
+                else
+                {
+                    m_secondes = value;
+
+                }
             }
         }
         #endregion

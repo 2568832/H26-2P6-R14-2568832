@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
 
 namespace ApplicationMontre
 {
@@ -15,6 +16,7 @@ namespace ApplicationMontre
             m_objMontre = new Montre(9, 05, 42);
 
             txtAffichageMontre.Text = m_objMontre.ObtenirTempsCourant();
+
         }
 
         //============================================================================
