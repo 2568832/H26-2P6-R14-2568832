@@ -78,24 +78,24 @@ namespace AppExceptions
         private void BtnExemple4_Click(object sender, EventArgs evt)
         {
             // DÉCOMMENTEZ
-            //List<Personne> colPersonnes = new List<Personne>();
-            //StreamReader objStreamReader = new StreamReader("ListeDesPersonnes.txt");
-            //while (!objStreamReader.EndOfStream)
-            //{
-            //    try
-            //    {
-            //        string uneLigneLue = objStreamReader.ReadLine();
-            //        Personne unePersonne = new Personne(uneLigneLue);
-            //        colPersonnes.Add(unePersonne);
-            //    }
-            //    catch (Exception e)
-            //    {
-            //        MessageBox.Show(e.Message);
-            //    }
-                
-            //}
-            //objStreamReader.Close();
-            //MessageBox.Show("Le nombre de personnes dans la liste est de : " + colPersonnes.Count);
+            List<Personne> colPersonnes = new List<Personne>();
+            StreamReader objStreamReader = new StreamReader("ListeDesPersonnes.txt");
+            while (!objStreamReader.EndOfStream)
+            {
+                try
+                {
+                    string uneLigneLue = objStreamReader.ReadLine();
+                    Personne unePersonne = new Personne(uneLigneLue);
+                    colPersonnes.Add(unePersonne);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+
+            }
+            objStreamReader.Close();
+            MessageBox.Show("Le nombre de personnes dans la liste est de : " + colPersonnes.Count);
 
         }
         #endregion
