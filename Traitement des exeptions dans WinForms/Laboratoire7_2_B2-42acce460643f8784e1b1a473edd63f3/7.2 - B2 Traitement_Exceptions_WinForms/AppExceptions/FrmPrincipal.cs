@@ -79,6 +79,26 @@ namespace AppExceptions
         {
             // DÉCOMMENTEZ
             List<Personne> colPersonnes = new List<Personne>();
+<<<<<<< HEAD
+=======
+            StreamReader objStreamReader = new StreamReader("ListeDesPersonnes.txt");
+            while (!objStreamReader.EndOfStream)
+            {
+                try
+                {
+                    string uneLigneLue = objStreamReader.ReadLine();
+                    Personne unePersonne = new Personne(uneLigneLue);
+                    colPersonnes.Add(unePersonne);
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show(e.Message);
+                }
+
+            }
+            objStreamReader.Close();
+            MessageBox.Show("Le nombre de personnes dans la liste est de : " + colPersonnes.Count);
+>>>>>>> 28970aef6156ec97dce1a60f9a630539743c57ee
 
             try
             {
